@@ -1,22 +1,19 @@
 plugins {
-    id("com.android.application") version "8.7.0"
-    id("org.jetbrains.kotlin.android") version "2.0.21"
+    id("com.android.application")
+    kotlin("android") version "1.9.0"  // Add explicit Kotlin version
 }
 
 android {
-    namespace = "com.shivi.assistant"
-    compileSdk = 35
-
+    compileSdk = 34
+    namespace = "com.example.shiviassistant143"  // Add this line
+    
     defaultConfig {
-        applicationId = "com.shivi.assistant"
-        minSdk = 26
-        targetSdk = 35
+        applicationId = "com.example.shiviassistant143"
+        minSdk = 21
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
     }
-}
-
-dependencies {
-    implementation("androidx.core:core-ktx:1.13.1")
-    implementation("androidx.appcompat:appcompat:1.7.0")
+    
+    // ... rest of your config
 }
