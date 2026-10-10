@@ -20,4 +20,4 @@ jobs:
           cache: gradle
 
       - name: Build debug APK
-        run: gradle assembleDebug
+        run: gradle assembleDebug -info
