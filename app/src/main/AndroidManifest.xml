@@ -30,7 +30,8 @@
             android:name=".ShiviOverlayService"
             android:enabled="true"
             android:exported="true"
-            android:foregroundServiceType="specialUse" />
+            android:foregroundServiceType="specialUse"
+            android:permission="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
 
         <service
             android:name=".ShiviAccessibilityService"
