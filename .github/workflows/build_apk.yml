@@ -12,10 +12,11 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
+      - name: Make gradlew executable
+        run: chmod +x ./gradlew
       - name: Build Debug APK
         run: |
-          gradle clean
-          gradle assembleDebug --stacktrace
+          ./gradlew clean assembleDebug --stacktrace --info
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
