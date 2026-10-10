@@ -6,14 +6,19 @@ plugins {
 android {
     namespace = "com.shivi.assistant"
     compileSdk = 35
-sourceSets { getByName("main") { manifest.srcFile("src/main/AndroidManifest.xml") } }
+
+    sourceSets { 
+        getByName("main") { 
+            manifest.srcFile("src/main/AndroidManifest.xml") 
+        } 
+    }
+
     defaultConfig {
         applicationId = "com.shivi.assistant"
         minSdk = 26
         targetSdk = 35
         versionCode = 1
         versionName = "1.0"
-
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -28,8 +33,8 @@ sourceSets { getByName("main") { manifest.srcFile("src/main/AndroidManifest.xml"
     }
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_17
-        targetCompatibility = JavaVersion.VERSION_17
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
     }
 
     kotlinOptions {
@@ -43,5 +48,5 @@ dependencies {
     implementation("com.google.android.material:material:1.12.0")
     implementation("androidx.constraintlayout:constraintlayout:2.2.0")
     implementation("androidx.work:work-runtime-ktx:2.10.0")
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.9.0")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
 }
