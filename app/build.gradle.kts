@@ -6,7 +6,7 @@ plugins {
 android {
     namespace = "com.shivi.assistant"
     compileSdk = 35
-
+sourceSets { getByName("main") { manifest.srcFile("src/main/AndroidManifest.xml") } }
     defaultConfig {
         applicationId = "com.shivi.assistant"
         minSdk = 26
