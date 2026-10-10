@@ -22,4 +22,6 @@ jobs:
         cache: 'gradle'
 
     - name: Build debug APK
-      run: ./gradlew assembleDebug --info
+      run: |
+        cd app
+        ./gradlew assembleDebug --info
